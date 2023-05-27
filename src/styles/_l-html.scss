@@ -1,0 +1,45 @@
+@use "h-fonts" as F;
+@use "h-breakPoint" as BP;
+@use "./mixin.scss" as M;
+html {
+  @include M.Texto(
+    F.$fontFamily2,
+    1.5rem,
+    400,
+    1.5rem
+  );
+}
+
+.Body {
+  display: grid;
+  grid-template-rows: 15vh 74vh 10vh;
+  // primer opcion
+  // grid-template-columns: repeat(4, 1fr);
+  // grid-template-areas: ". Header Header ."
+  //                      "Aside  Main   Main   Main"
+  //                      "Footer Footer Footer Footer";
+  // segunda opcion
+  grid-template-columns: repeat(12, 1fr);
+}
+
+//media
+@media screen and (max-width: BP.$breakPoint--lg) {
+  .Body {
+    grid-template-columns: repeat(8, 1fr);
+    background-color: aquamarine;
+  }
+}
+
+@media screen and (max-width: BP.$breakPoint--md) {
+  .Body {
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgb(213, 4, 213);
+  }
+}
+
+@media screen and (max-width: BP.$breakPoint--sm) {
+  .Body {
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(0, 0, 0);
+  }
+}

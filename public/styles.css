@@ -1,0 +1,193 @@
+html {
+  font-family: "Verdana", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #ae2012;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.Body {
+  display: grid;
+  grid-template-rows: 15vh 74vh 10vh;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@media screen and (max-width: 980px) {
+  .Body {
+    grid-template-columns: repeat(8, 1fr);
+    background-color: aquamarine;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Body {
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgb(213, 4, 213);
+  }
+}
+@media screen and (max-width: 500px) {
+  .Body {
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(0, 0, 0);
+  }
+}
+.Header {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 12;
+  background-color: #ee9b00;
+}
+.Header .section .article .navbar {
+  width: 90%;
+  height: 15vh;
+  background-color: coral;
+  color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: false;
+}
+
+.Header .section .article h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 4rem;
+  color: #ae2012;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  color: #0a9396;
+  text-align: center;
+}
+
+@media screen and (min-width: 1400px) {
+  .Header {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+  .Header .section .article h2 {
+    text-align: right;
+    color: #ae2012;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Header {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+}
+.Aside {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: blue;
+}
+
+.Aside .section .article h2 {
+  font-family: "Arial", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 3rem;
+  color: #ae2012;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  color: #e9d8a6;
+}
+
+.Main {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 13;
+  background-color: #005f73;
+}
+
+.Main .section .article h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 4rem;
+  color: #ae2012;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  color: #ee9b00;
+  text-align: left;
+}
+
+@media screen and (min-width: 1400px) {
+  .Main .section .article h2 {
+    text-align: right;
+    color: #e9d8a6;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Main {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+  .Main .section .article h2 {
+    color: #e9d8a6;
+    text-align: center;
+  }
+}
+.Footer {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  background-color: red;
+}
+.Footer .navbar {
+  width: 90%;
+  height: 15vh;
+  background-color: coral;
+  color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: false;
+}
+
+.Footer .section .article h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 3rem;
+  color: #ae2012;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .Footer .section .article h2 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: #ae2012;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

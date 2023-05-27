@@ -1,0 +1,47 @@
+@use "./h-colors" as *;
+@use "./h-fonts" as *;
+@use "./mixin.scss" as M;
+@use "h-breakPoint" as BP;
+
+.Main {
+  // grid-row: 2 / 3;
+  // grid-column: 4 / 13;
+  @include M.Grilla(2, 3, 4, 13);
+  background-color: $c-green900;
+}
+
+// .Main .section .article {
+//   @include M.Display(flex, row, space-around, center);
+// }
+
+.Main .section .article h2 {
+  @include M.Texto(
+    $fontFamily4,
+    4rem,
+    900,
+   4rem
+  );
+  color: $c-orange500;
+  text-align: left;
+}
+
+//medias
+//cuando sea mayor que 1440px
+@media screen and (min-width: BP.$breakPoint--xxl) {
+
+    .Main .section .article h2 {
+      text-align: right;
+      color: $c-yellow500;
+    }
+  }
+
+//cuando sea menor 768px
+@media screen and (max-width: BP.$breakPoint--md) {
+  .Main {
+    @include M.Grilla(2, 3, 1, 13);
+  }
+  .Main .section .article h2 {
+    color: $c-yellow500;
+    text-align: center;
+  }
+}

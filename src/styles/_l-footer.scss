@@ -1,0 +1,36 @@
+@use "./h-colors" as C;
+@use "./h-fonts" as *;
+@use "./mixin.scss" as M;
+@use "./h-breakPoint" as *;
+
+.Footer {
+  @include M.Grilla(3, 4, 1, 13);
+  background-color: rgb(21, 255, 0);
+  @import "./c-navbar";
+}
+
+.Footer .section .article h2 {
+  @include M.Texto(
+    $fontFamily5,
+    3rem,
+    900,
+    3rem
+  );
+  color: #fff;
+}
+
+//medias
+//cuando sea menor 500px
+@media screen and (max-width: $breakPoint--md) {
+    .Footer .section .article h2 {
+        @include M.Texto(
+          $fontFamily5,
+          2rem,
+          700,
+          3rem
+        );
+        color: #fff;
+        text-align: center;
+      }
+  }
+  

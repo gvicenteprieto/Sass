@@ -1,0 +1,14 @@
+@use "./h-colors" as C;
+@use "./h-fonts" as *;
+@use "./mixin.scss" as M;
+@use "./h-breakPoint" as *;
+
+.Aside {
+  @include M.Grilla(2, 3, 1, 4);
+  background-color: blue;
+}
+
+.Aside .section .article h2 {
+  @include M.Texto($fontFamily3, 3rem, 900, 3rem);
+  color: C.$c-yellow500;
+}

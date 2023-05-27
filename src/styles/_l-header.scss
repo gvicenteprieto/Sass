@@ -1,0 +1,45 @@
+@use "./h-colors" as *;
+@use "./h-fonts" as *;
+@use "./mixin.scss" as M;
+@use "./h-breakPoint" as *;
+
+.Header {
+  @include M.Grilla(1, 2, 2, 12);
+  background-color: $c-orange500;
+
+  & .section {
+    & .article {
+      @import "./c-navbar";
+    }
+  }
+}
+
+.Header .section .article h2 {
+  @include M.Texto(
+    $fontHeader,
+    3rem,
+    900,
+    4rem
+  );
+  color: $c-green500;
+  text-align: center;
+}
+
+//medias
+//cuando sea mayor que 1440px
+@media screen and (min-width: $breakPoint--xxl) {
+  .Header {
+    @include M.Grilla(1, 2, 1, 13);
+  }
+  .Header .section .article h2 {
+    text-align: right;
+    color: $c-red500;
+  }
+}
+
+//cuando sea menor 500px
+@media screen and (max-width: $breakPoint--sm) {
+  .Header {
+    @include M.Grilla(1, 2, 1, 13);
+  }
+}

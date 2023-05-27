@@ -1,0 +1,31 @@
+//declaraciones globales.
+@use './h-colors' as * ;
+@use './h-fonts' as * ;
+
+@mixin Display ($display, $flexFlow, $justifyContent, $alignItems, $gap : false){
+    display: $display;
+    flex-flow: $flexFlow;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    @if gap {
+        gap: $gap;
+    }
+}
+
+@mixin Texto ($fontFamily, $fontSize, $fontWeight, $lineHeight){
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    color: $c-red500 ;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin Grilla ($gridRowStart, $gridRowEnd, $gridColumnStart, $gridColumnEnd) {
+    grid-row-start: $gridRowStart ;
+    grid-row-end: $gridRowEnd;
+    grid-column-start: $gridColumnStart;
+    grid-column-end: $gridColumnEnd;
+}

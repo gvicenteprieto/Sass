@@ -1,0 +1,32 @@
+@use "./h-fonts" as F;
+@use "./h-colors" as C;
+@use "./mixin.scss" as M;
+
+.navbar {
+  width: 90%;
+  height: 15vh;
+
+  background-color: coral;
+  color: #fff;
+
+  //antes de mixins:
+
+  // display :flex ;
+  // flex-flow: row;                      flex-flow => flex-direction + flex-wrap
+  // justify-content: space-around ;
+  // align-items: center ;
+
+  //con mixins
+  @include M.Display(flex, row nowrap, space-around, center);
+
+  //   & .logo {
+  //   }
+  //   & .menu {
+  //   }
+  //   & .cta {
+  //     display: inline-flex;
+
+  //     & .link {
+  //     }
+  //   }
+}
